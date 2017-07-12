@@ -98,6 +98,10 @@ a:focus {
     text-align: center;
 }
 
+.inline-icon  {
+    padding-right: 10px;
+    padding-left: 10px;
+}
 
 .socialicon .fa {
     color: #607D8B;
