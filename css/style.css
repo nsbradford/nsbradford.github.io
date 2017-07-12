@@ -2,6 +2,17 @@ h1 span {
     color: #0277bd;
 }
 
+.backdrop {
+    background-size: cover;
+    height: 99%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+}
+
 .team-member {
     text-align:left;
     padding:1em;
