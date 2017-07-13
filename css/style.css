@@ -93,8 +93,8 @@ a:focus {
 /* IMG AND SOCIAL ICONS */
 
 #social {
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     text-align: center;
 }
 
@@ -136,8 +136,9 @@ a:focus {
     }
     .socialicon .fa {
         color: #607D8B;
-        margin-right: 2px;
-        margin-left: 2px;
+        padding-top: 5px;
+        padding-right: 7px;
+        padding-left: 7px;
         font-size: 1em;
     }
 
