@@ -17,19 +17,31 @@
 // $(document).ready(collapseNavbar);
 
 // jQuery for page scrolling feature - requires jQuery Easing plugin
-$(function() {
-    $('a.page-scroll').bind('click', function(event) {
-        var $anchor = $(this);
-        $('html, body').stop().animate({
+$(function () {
+  $('a.page-scroll').bind(
+    'click',
+    function (this: JQuery, event: JQueryEventObject) {
+      var $anchor = $(this);
+      $('html, body')
+        .stop()
+        .animate(
+          {
             scrollTop: $($anchor.attr('href')).offset().top
-        }, 1500, 'easeInOutExpo');
-        event.preventDefault();
-    });
+          },
+          1500,
+          'easeInOutExpo'
+        );
+      event.preventDefault();
+    }
+  );
 });
 
 // Closes the Responsive Menu on Menu Item Click
-$('.navbar-collapse ul li a').click(function() {
-  if ($(this).attr('class') != 'dropdown-toggle active' && $(this).attr('class') != 'dropdown-toggle') {
+$('.navbar-collapse ul li a').click(function (this: JQuery) {
+  if (
+    $(this).attr('class') != 'dropdown-toggle active' &&
+    $(this).attr('class') != 'dropdown-toggle'
+  ) {
     $('.navbar-toggle:visible').click();
   }
 });
@@ -37,33 +49,29 @@ $('.navbar-collapse ul li a').click(function() {
 // // Google Maps Scripts
 
 function initMap() {
-    var mapDiv = document.getElementById('map');
-    var myLatLng = {lat: 42.2739, lng: -71.8060};
+  var mapDiv = document.getElementById('map');
+  var myLatLng = { lat: 42.2739, lng: -71.806 };
 
-    var map = new google.maps.Map(mapDiv, {
-        // Disables the default Google Maps UI components
-        // disableDefaultUI: true,
-        // draggable: false,
-        scrollwheel: false,
-        center: myLatLng,
-        zoom: 16,
-        styles: [
-          {
-            "stylers": [
-              { "hue": "#0099ff" },
-              { "saturation": -8 }
-            ]
-          }
-        ]
-    });
+  var map = new google.maps.Map(mapDiv, {
+    // Disables the default Google Maps UI components
+    // disableDefaultUI: true,
+    // draggable: false,
+    scrollwheel: false,
+    center: myLatLng,
+    zoom: 16,
+    styles: [
+      {
+        stylers: [{ hue: '#0099ff' }, { saturation: -8 }]
+      }
+    ]
+  });
 
-    var marker = new google.maps.Marker({
-        position: myLatLng,
-        map: map,
-        title: 'Here I am!'
-    });
+  var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    title: 'Here I am!'
+  });
 }
-
 
 // var map = null;
 // // When the window has finished loading create our google map below
@@ -87,7 +95,7 @@ function initMap() {
 //         scrollwheel: false,
 //         draggable: false,
 
-//         // How you would like to style the map. 
+//         // How you would like to style the map.
 //         // This is where you would paste any style found on Snazzy Maps.
 //         styles: [{
 //             "featureType": "water",
@@ -199,7 +207,7 @@ function initMap() {
 //         }]
 //     };
 
-//     // Get the HTML DOM element that will contain your map 
+//     // Get the HTML DOM element that will contain your map
 //     // We are using a div with id="map" seen below in the <body>
 //     var mapElement = document.getElementById('map');
 
